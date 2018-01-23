@@ -7,7 +7,7 @@ use spaceapi_server::api::sensors::PeopleNowPresentSensorTemplate;
 use spaceapi_server::modifiers::StateFromPeopleNowPresent;
 
 fn main() {
-    env_logger::init().unwrap();
+    env_logger::init();
 
     // Create new minimal Status instance
     let status = api::StatusBuilder::new("coredump")
