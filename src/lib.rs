@@ -9,7 +9,7 @@
 #![cfg_attr(feature="clippy", plugin(clippy))]
 
 #[macro_use] extern crate log;
-#[macro_use] extern crate error_type;
+#[macro_use] extern crate quick_error;
 extern crate rustc_serialize;
 extern crate serde_json;
 extern crate iron;
