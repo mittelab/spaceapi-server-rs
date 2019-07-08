@@ -8,9 +8,8 @@ addons:
       - libdw-dev
       - binutils-dev
 rust:
-  - 1.30.0
+  - 1.31.0
   - stable
-  - beta
   - nightly
 
 matrix:
