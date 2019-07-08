@@ -1,5 +1,6 @@
 //! Custom error types.
 
+use quick_error::quick_error;
 use redis::RedisError;
 use r2d2::InitializationError;
 use std::io;

@@ -9,16 +9,12 @@
 #![cfg_attr(feature="clippy", plugin(clippy))]
 
 #[macro_use] extern crate log;
-#[macro_use] extern crate quick_error;
-extern crate rustc_serialize;
-extern crate serde_json;
-extern crate iron;
-extern crate router;
-extern crate urlencoded;
-extern crate r2d2;
-extern crate r2d2_redis;
-extern crate redis;
-pub extern crate spaceapi as api;
+
+use serde_json;
+use urlencoded;
+use r2d2;
+
+pub use spaceapi as api;
 
 pub use iron::error::HttpResult;
 pub use iron::Listening;

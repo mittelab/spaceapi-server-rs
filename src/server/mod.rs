@@ -26,7 +26,7 @@ pub struct SpaceapiServerBuilder {
     status: api::Status,
     redis_connection_info: Result<ConnectionInfo, SpaceapiServerError>,
     sensor_specs: Vec<sensors::SensorSpec>,
-    status_modifiers: Vec<Box<modifiers::StatusModifier>>,
+    status_modifiers: Vec<Box<dyn modifiers::StatusModifier>>,
 }
 
 impl SpaceapiServerBuilder {
@@ -113,7 +113,7 @@ pub struct SpaceapiServer {
     status: api::Status,
     redis_pool: RedisPool,
     sensor_specs: sensors::SafeSensorSpecs,
-    status_modifiers: Vec<Box<modifiers::StatusModifier>>,
+    status_modifiers: Vec<Box<dyn modifiers::StatusModifier>>,
 }
 
 impl SpaceapiServer {
